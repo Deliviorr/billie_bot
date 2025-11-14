@@ -1,0 +1,31 @@
+TrackTraceCode,Vervoerder,VerwachtAankomsttijdstip,Status,Opmerking
+3SAB123456789NL,PostNL,04-11-2024 vóór 17:00,Onderweg,Laatste scan: Sorteercentrum Eindhoven
+9876543210,DHL,28-10-2024 vóór 21:00,Afgeleverd,Afgeleverd bij buren
+DP12345678901234,DPD,02-11-2024 14:00 - 16:00,Verzonden,Verwerkt bij afzender
+1Z999AA1122334455,UPS,29-10-2024 vóór 12:00,Bij afhaalpunt,Beschikbaar bij Primera Centrum
+123456789012,FedEx,28-10-2024 vóór 10:30,Afgeleverd,Handtekening ontvangen
+CX987654321NL,PostNL,05-11-2024 vóór 15:00,Vertrokken uit sorteercentrum,Onderweg naar buitenland
+3SAC999888777NL,PostNL,01-11-2024 vóór 13:00,Afgeleverd,In de brievenbus gepost
+1122334455,DHL,30-10-2024 vóór 18:00,Vertraagd,Weersomstandigheden
+DP55544433322211,DPD,31-10-2024 10:00 - 12:00,Bij afhaalpunt,Beschikbaar bij Albert Heijn
+1Z888BB9988776655,UPS,03-11-2024 vóór 14:00,Onderweg,In clearing (douane)
+555666777888,FedEx,29-10-2024 vóór 16:00,Afgeleverd,
+3SAD444555666NL,PostNL,30-10-2024 vóór 12:00,Aangemeld,Verzender heeft pakket aangemeld
+7778889990,DHL,04-11-2024 vóór 17:00,Onderweg,
+DP11122233344455,DPD,02-11-2024 09:00 - 11:00,Onderweg,Rijt naar depot
+1Z777CC6655443322,UPS,31-10-2024 vóór 10:00,Afgeleverd,
+999000111222,FedEx,05-11-2024 vóór 12:00,Vertrokken sorteercentrum,
+3SAE777888999NL,PostNL,01-11-2024 vóór 15:00,Afgeleverd,In pakketkluis geplaatst
+4445556667,DHL,30-10-2024 vóór 22:00,Verzonden,
+DP66677788899900,DPD,03-11-2024 13:00 - 15:00,Vertraagd,Niet gelukt, nieuwe poging morgen
+1Z444DD1122334455,UPS,04-11-2024 vóór 13:00,Onderweg,
+333444555666,FedEx,28-10-2024 vóór 14:00,Afgeleverd,
+3SAF111222333NL,PostNL,02-11-2024 vóór 11:00,Onderweg,
+2223334445,DHL,29-10-2024 vóór 20:00,Afgeleverd,
+DP88899900011122,DPD,05-11-2024 11:00 - 13:00,Verzonden,
+1Z222EE9988776655,UPS,31-10-2024 vóór 11:00,Afgeleverd,
+111222333444,FedEx,03-11-2024 vóór 15:00,Onderweg,
+3SAG555666777NL,PostNL,30-10-2024 vóór 17:00,Aangemeld,
+8889990001,DHL,04-11-2024 vóór 19:00,Vertrokken sorteercentrum,
+DP00011122233344,DPD,01-11-2024 12:00 - 14:00,Bij afhaalpunt,Beschikbaar bij Bruna
+1Z111FF4455667788,UPS,02-11-2024 vóór 16:00,Vertraagd,Verkeersopstopping
