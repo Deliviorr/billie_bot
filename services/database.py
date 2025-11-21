@@ -16,19 +16,19 @@ def connect_db():
 def generate_case_id():
     return "CASE-" + str(uuid.uuid4())[:8].upper()
 
-def create_case(customer_question: str, gemini_answer: str) -> str:
+def create_case(customer_question: str, gemini_answer: str, sentiment_score: str) -> str:
     case_id = generate_case_id()
     
     sql = """
-    INSERT INTO cases (case_id, customer_question, gemini_answer)
-    VALUES (%s, %s, %s)
+    INSERT INTO cases (case_id, customer_question, gemini_answer, sentiment_score)
+    VALUES (%s, %s, %s, %s)
     RETURNING case_id
     """
     
     try:
         conn = connect_db()
         cur = conn.cursor()
-        cur.execute(sql, (case_id, customer_question, gemini_answer))
+        cur.execute(sql, (case_id, customer_question, gemini_answer, sentiment_score))
         conn.commit()
         cur.close()
         conn.close()

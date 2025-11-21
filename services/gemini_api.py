@@ -3,6 +3,7 @@ from google.genai import types
 import time
 from dotenv import load_dotenv
 from services.database import create_case
+from services.sentiment import sentiment_analyse
 import os
 
 load_dotenv()
@@ -58,7 +59,7 @@ Vraag van de klant:
     try:
         response = client.models.generate_content(
             model=os.getenv("MODEL_VERSIE"),
-            contents=system_prompt + vraag,
+            contents=system_prompt,
             config=types.GenerateContentConfig(
             tools=[tool]
             )
@@ -72,7 +73,8 @@ Vraag van de klant:
             if not clean_answer:
                 clean_answer = "Deze vraag is te complex voor mij. Ik maak een case aan voor een medewerker."
 
-            case_id = create_case(customer_question=vraag, gemini_answer=gemini_text)
+            sentiment_score = sentiment_analyse(vraag)
+            case_id = create_case(customer_question=vraag, sentiment_score=sentiment_score ,gemini_answer=gemini_text)
 
             return f"{clean_answer}\n\n" \
                    f"Ik heb een case voor je aangemaakt: **{case_id}**\n" \
@@ -82,4 +84,6 @@ Vraag van de klant:
             return gemini_text
 
     except Exception as e:
-        return "Sorry, er is iets misgegaan. Probeer het later opnieuw"
+        return f"Sorry, er is iets misgegaan. Probeer het later opnieuw. \n {e}"
+
+
