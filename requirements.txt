@@ -2,3 +2,5 @@ streamlit
 chromadb
 google-generativeai
 psycopg2
+vaderSentiment
+translate
