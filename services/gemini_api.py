@@ -74,7 +74,7 @@ Vraag van de klant:
                 clean_answer = "Deze vraag is te complex voor mij. Ik maak een case aan voor een medewerker."
 
             sentiment_score = sentiment_analyse(vraag)
-            case_id = create_case(customer_question=vraag, sentiment_score=sentiment_score ,gemini_answer=gemini_text)
+            case_id = create_case(customer_question=vraag, sentiment_score=sentiment_score ,gemini_answer=gemini_text[10:].strip())
 
             return f"{clean_answer}\n\n" \
                    f"Ik heb een case voor je aangemaakt: **{case_id}**\n" \

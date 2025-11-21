@@ -16,6 +16,24 @@ st.markdown(
     html, body, .stApp {{
         background-color: #FFFFFF !important;
     }}
+        .main-header {{
+        background: white;
+        padding: 24px;
+        border-radius: 16px;
+        border-left: 6px solid {BOL_BLUE};
+        margin-bottom: 20px;
+    }}
+    .main-header h1 {{
+        color: {BOL_BLUE};
+        margin: 0;
+        font-size: 32px;
+        font-weight: 800;
+    }}
+    .main-header p {{
+        color: #003DA5;
+        margin-top: 6px;
+        font-size: 15px;
+    }}
     
     .page-bg {{
         background-color: {BG_LIGHT};
@@ -55,9 +73,9 @@ st.markdown(
         margin-bottom: 18px;
     }}
     </style>
-    <div class="page-bg">
-        <div class="title">Billie Bot</div>
-        <div class="subtitle">Stel je vraag en krijg direct antwoord</div>
+    <div class="main-header">
+    <h1>Billie Bot</h1>
+    <p>Stel je vraag en krijg direct antwoord</p>
     </div>
     """,
     unsafe_allow_html=True,
@@ -119,3 +137,5 @@ if prompt is not None:
             "content": answer,
             "ts": ts2
         })
+
+        st.rerun()
