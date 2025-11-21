@@ -10,7 +10,7 @@ def sentiment_analyse(tekst):
     scores_compound = scores['compound']
 
     if scores_compound <= -0.5:
-        return "Boos"
+        return "boos"
     elif -0.5 < scores_compound < 0:
         return "negatief"
     elif scores_compound == 0:

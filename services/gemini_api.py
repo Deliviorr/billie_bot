@@ -46,12 +46,6 @@ Regels:
   CASE_NODIG
 - Als case nodig is, hou de worden dan onder 255 karakters, zodat het past in de database
 
-Voorbeelden van CASE_NODIG:
-- Terugbetaling buiten termijn
-- Kapot product of klacht
-- Vraag over een specifiek order
-- Accountproblemen, inloggen, wachtwoord, etc.
-
 Vraag van de klant:
 {vraag}
 """
