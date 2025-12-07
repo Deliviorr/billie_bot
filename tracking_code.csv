@@ -1,0 +1,60 @@
+import pandas as pd
+
+# Data 
+data = {
+    "Track & Trace Code": [
+        "3SAB123456789NL", "9876543210", "DP12345678901234", "1Z999AA1122334455",
+        "1.23457E+11", "CX987654321NL", "3SAC999888777NL", "1122334455",
+        "DP55544433322211", "1Z888BB9988776655", "5.55667E+11", "3SAD444555666NL",
+        "7778889990", "DP11122233344455", "1Z777CC6655443322", "9.99E+11",
+        "3SAE777888999NL", "4445556667", "DP66677788899900", "1Z444DD1122334455",
+        "3.33445E+11", "3SAF111222333NL", "2223334445", "DP88899900011122",
+        "1Z222EE9988776655", "1.11222E+11", "3SAG555666777NL", "8889990001",
+        "DP00011122233344", "1Z111FF4455667788"
+    ],
+    "Vervoerder": [
+        "PostNL", "DHL", "DPD", "UPS", "FedEx", "PostNL", "PostNL", "DHL",
+        "DPD", "UPS", "FedEx", "PostNL", "DHL", "DPD", "UPS", "FedEx",
+        "PostNL", "DHL", "DPD", "UPS", "FedEx", "PostNL", "DHL", "DPD",
+        "UPS", "FedEx", "PostNL", "DHL", "DPD", "UPS"
+    ],
+    "Verwacht Aankomsttijdstip": [
+        "04-11-2024 vóór 17:00", "28-10-2024 vóór 21:00", "02-11-2024 14:00 - 16:00",
+        "29-10-2024 vóór 12:00", "28-10-2024 vóór 10:30", "05-11-2024 vóór 15:00",
+        "01-11-2024 vóór 13:00", "30-10-2024 vóór 18:00", "31-10-2024 10:00 - 12:00",
+        "03-11-2024 vóór 14:00", "29-10-2024 vóór 16:00", "30-10-2024 vóór 12:00",
+        "04-11-2024 vóór 17:00", "02-11-2024 09:00 - 11:00", "31-10-2024 vóór 10:00",
+        "05-11-2024 vóór 12:00", "01-11-2024 vóór 15:00", "30-10-2024 vóór 22:00",
+        "03-11-2024 13:00 - 15:00", "04-11-2024 vóór 13:00", "28-10-2024 vóór 14:00",
+        "02-11-2024 vóór 11:00", "29-10-2024 vóór 20:00", "05-11-2024 11:00 - 13:00",
+        "31-10-2024 vóór 11:00", "03-11-2024 vóór 15:00", "30-10-2024 vóór 17:00",
+        "04-11-2024 vóór 19:00", "01-11-2024 12:00 - 14:00", "02-11-2024 vóór 16:00"
+    ],
+    "Status": [
+        "Onderweg", "Afgeleverd", "Verzonden", "Bij afhaalpunt", "Afgeleverd",
+        "Vertrokken uit sorteercentrum", "Afgeleverd", "Vertraagd", "Bij afhaalpunt",
+        "Onderweg", "Afgeleverd", "Aangemeld", "Onderweg", "Onderweg", "Afgeleverd",
+        "Vertrokken sorteercentrum", "Afgeleverd", "Verzonden", "Vertraagd", "Onderweg",
+        "Afgeleverd", "Onderweg", "Afgeleverd", "Verzonden", "Afgeleverd", "Onderweg",
+        "Aangemeld", "Vertrokken sorteercentrum", "Bij afhaalpunt", "Vertraagd"
+    ],
+    "Opmerking": [
+        "Laatste scan: Sorteercentrum Eindhoven", "Afgeleverd bij buren", "Verwerkt bij afzender",
+        "Beschikbaar bij Primera Centrum", "Handtekening ontvangen", "Onderweg naar buitenland",
+        "In de brievenbus gepost", "Weersomstandigheden", "Beschikbaar bij Albert Heijn",
+        "In clearing (douane)", "", "Verzender heeft pakket aangemeld", "", "Rijdt naar depot",
+        "", "", "In pakketkluis geplaatst", "", "Niet gelukt, nieuwe poging morgen", "",
+        "", "", "", "", "", "", "", "", "Beschikbaar bij Bruna", "Verkeersopstopping"
+    ]
+}
+
+# Maak DataFrame
+df = pd.DataFrame(data)
+
+# Sla op als CSV
+df.to_csv("track_trace_data.csv", index=False, encoding='utf-8')
+print("✅ CSV bestand 'track_trace_data.csv' is aangemaakt met 30 pakketten!")
+
+# Laad en toon de eerste paar rijen ter verificatie
+print("\n📦 Eerste 5 pakketten in de database:")
+print(df.head())
